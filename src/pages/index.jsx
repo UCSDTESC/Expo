@@ -13,17 +13,19 @@ export default ({ data }) => {
       <table>
         <thead>
           <tr>
-            <th>Project</th>
-            <th>Table</th>
-            <th>Link</th>
+            <th>Team</th>
+            <th>Table Location</th>
+            <th>DevPost URL</th>
+            <th>Desired Prizes</th>
           </tr>
         </thead>
         <tbody>
           {expoNodes.map(node => (
             <tr key={node.table}>
-              <th>{node.project}</th>
-              <th>{node.table}</th>
-              <th>{node.link}</th>
+              <th>{node.Team}</th>
+              <th>{node.Table_location}</th>
+              <th>{node.DevPos_Url}</th>
+              <th>{node.Desired_Prizes}</th>
             </tr>
           ))}
         </tbody>
@@ -32,13 +34,15 @@ export default ({ data }) => {
   )
 }
 
+// TOOD: Query for CSV fields first to dynamically get data
 export const query = graphql`
   {
     allDataCsv {
       nodes {
-        project
-        table
-        link
+        Team
+        Table_location
+        DevPos_Url
+        Desired_Prizes
       }
     }
   }
