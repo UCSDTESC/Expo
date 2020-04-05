@@ -20,6 +20,7 @@ This website is built with [Gatsby](https://www.gatsbyjs.org/). Check out their 
 
     ```shell
     cd Expo/
+    npm install
     gatsby develop
     ```
 
