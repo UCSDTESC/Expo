@@ -17,7 +17,7 @@ export default ({ data }) => {
       <Table data={expoNodes} />
       <Footer>
         <h1>Ok bye</h1>
-      </Footer>      
+      </Footer>
     </Container>
   )
 }
