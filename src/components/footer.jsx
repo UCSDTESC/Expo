@@ -1,8 +1,5 @@
 import React from "react"
 import styled from "styled-components"
 
-export default ({ children }) => (
-    <>
-        {children}
-    </>
-)
+export default ({ children }) => <Footer>{children}</Footer>
+const Footer = styled.footer``
