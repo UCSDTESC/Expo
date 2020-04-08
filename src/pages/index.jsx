@@ -2,35 +2,23 @@ import React from "react"
 import styled from "styled-components"
 import { graphql } from "gatsby"
 
-import Layout from "../components/layout"
+import Header from "../components/header"
+import Table from "../components/table"
+import Footer from "../components/footer"
 
 export default ({ data }) => {
-  console.log(data);
   const expoNodes = data.allDataCsv.nodes
 
   return (
-    <Layout>
-      <table>
-        <thead>
-          <tr>
-            <th>Team</th>
-            <th>Table Location</th>
-            <th>DevPost URL</th>
-            <th>Desired Prizes</th>
-          </tr>
-        </thead>
-        <tbody>
-          {expoNodes.map(node => (
-            <tr key={node.table}>
-              <th>{node.Team}</th>
-              <th>{node.Table_location}</th>
-              <th>{node.DevPos_Url}</th>
-              <th>{node.Desired_Prizes}</th>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </Layout>
+    <Container>
+      <Header>
+        <h1>SDHacks</h1>
+      </Header>
+      <Table data={expoNodes} />
+      <Footer>
+        <h1>Ok bye</h1>
+      </Footer>      
+    </Container>
   )
 }
 
@@ -46,4 +34,12 @@ export const query = graphql`
       }
     }
   }
+`
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center
 `
