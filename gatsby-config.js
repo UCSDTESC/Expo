@@ -15,6 +15,12 @@ module.exports = {
     `gatsby-transformer-csv`,
     `gatsby-plugin-styled-components`,
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`
+    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-typography`,
+      options: {
+        pathToConfigModule: `src/utils/typography`,
+      },
+    },
   ],
 }
