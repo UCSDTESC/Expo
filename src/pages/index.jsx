@@ -18,7 +18,7 @@ export default ({ data }) => {
       </Header>
       <Table data={expoNodes} />
       <Footer>
-        <span>HackXXX 2019</span>
+        <span>HackXX 2019</span>
         <span>TESC</span>
         <span>Devpost</span>
       </Footer>
