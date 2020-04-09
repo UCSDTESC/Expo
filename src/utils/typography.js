@@ -1,7 +1,7 @@
 import Typography from "typography"
 
 const typography = new Typography({
-  baseFontSize: "18px",
+  baseFontSize: "16px",
   baseLineHeight: 1.666,
   headerFontFamily: [
     "Avenir Next",
@@ -12,6 +12,15 @@ const typography = new Typography({
     "sans-serif",
   ],
   bodyFontFamily: ["Lato", "sans-serif"],
+  overrideStyles: () => ({
+    // work around for 0 padding injected by Typography.js
+    'th:first-child, td:first-child': {
+      paddingLeft: '1.11067rem'
+    },
+    'th:last-child, td:last-child': {
+      paddingLeft: '1.11067rem'
+    }
+  })
 })
 
 export default typography
