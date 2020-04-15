@@ -18,7 +18,7 @@ const typography = new Typography({
       paddingLeft: '1.11067rem'
     },
     'th:last-child, td:last-child': {
-      paddingLeft: '1.11067rem'
+      paddingRight: '1.11067rem'
     }
   })
 })
